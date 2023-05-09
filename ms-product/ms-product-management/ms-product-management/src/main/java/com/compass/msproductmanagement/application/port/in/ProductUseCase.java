@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface ProductService {
+public interface ProductUseCase {
 
     ResponseEntity<ProductResponse> findProductById(String productId);
 

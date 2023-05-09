@@ -1,4 +1,4 @@
-package com.compass.msproductmanagement.adapter.out.client;
+package com.compass.msproductmanagement.framework.adapter.out.client;
 
 import com.compass.msproductmanagement.domain.dto.ProductRequest;
 import com.compass.msproductmanagement.domain.dto.ProductResponse;

@@ -1,7 +1,7 @@
 package com.compass.msproductmanagement.application.service;
 
-import com.compass.msproductmanagement.application.port.in.ProductService;
-import com.compass.msproductmanagement.application.port.out.ProductServiceOut;
+import com.compass.msproductmanagement.application.port.in.ProductUseCase;
+import com.compass.msproductmanagement.application.port.out.ApiProductsPortOut;
 import com.compass.msproductmanagement.domain.dto.ProductRequest;
 import com.compass.msproductmanagement.domain.dto.ProductResponse;
 import lombok.RequiredArgsConstructor;
@@ -12,38 +12,38 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl implements ProductUseCase {
 
-    private final ProductServiceOut productServiceOut;
+    private final ApiProductsPortOut apiProductsPortOut;
 
     @Override
     public ResponseEntity<List<ProductResponse>> findAllProducts() {
-        return productServiceOut.findAllProducts();
+        return apiProductsPortOut.findAllProducts();
     }
 
     @Override
     public ResponseEntity<ProductResponse> findProductById(String productId) {
-        return productServiceOut.findProductById(productId);
+        return apiProductsPortOut.findProductById(productId);
     }
 
     @Override
     public ResponseEntity<List<ProductResponse>> findProductByFilters(Double minPrice, Double maxPrice, String query) {
-        return productServiceOut.findProductByFilters(minPrice, maxPrice, query);
+        return apiProductsPortOut.findProductByFilters(minPrice, maxPrice, query);
     }
 
     @Override
     public ResponseEntity<ProductResponse> createProduct(ProductRequest productRequest) {
-        return productServiceOut.createProduct(productRequest);
+        return apiProductsPortOut.createProduct(productRequest);
     }
 
     @Override
     public ResponseEntity<ProductResponse> updateProductById(String id, ProductRequest productRequest) {
-        return productServiceOut.updateProductById(id, productRequest);
+        return apiProductsPortOut.updateProductById(id, productRequest);
     }
 
     @Override
     public ResponseEntity<ProductResponse> deleteProduct(String id) {
-        return productServiceOut.deleteProduct(id);
+        return apiProductsPortOut.deleteProduct(id);
     }
 
 }

@@ -9,7 +9,6 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

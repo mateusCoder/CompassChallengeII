@@ -1,7 +1,7 @@
-package com.compass.msproductmanagement.adapter.out;
+package com.compass.msproductmanagement.framework.adapter.out;
 
-import com.compass.msproductmanagement.adapter.out.client.FeignClientConfig;
-import com.compass.msproductmanagement.application.port.out.ProductServiceOut;
+import com.compass.msproductmanagement.framework.adapter.out.client.FeignClientConfig;
+import com.compass.msproductmanagement.application.port.out.ApiProductsPortOut;
 import com.compass.msproductmanagement.domain.dto.ProductRequest;
 import com.compass.msproductmanagement.domain.dto.ProductResponse;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ProductServiceImplOut implements ProductServiceOut {
+public class ApiProductsPortOutImpl implements ApiProductsPortOut {
 
     private final FeignClientConfig feignClient;
 

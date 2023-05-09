@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface ProductServiceOut {
+public interface ApiProductsPortOut {
 
     ResponseEntity<List<ProductResponse>> findAllProducts();
 

@@ -1,4 +1,4 @@
-package com.compass.msproductmanagement.adapter.in;
+package com.compass.msproductmanagement.framework.adapter.in;
 
 import com.compass.msproductmanagement.application.service.ProductServiceImpl;
 import com.compass.msproductmanagement.domain.dto.ProductRequest;
